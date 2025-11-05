@@ -1,0 +1,42 @@
+/* base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #222; background: #fafafa; }
+
+/* layout ids and classes */
+#container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+#site_header { padding: 1rem 0; }
+#page_main.two_col { display: flex; gap: 1rem; align-items: flex-start; }
+
+.content_area { flex: 2 1 640px; background: #fff; padding: 1rem; border: 1px solid #eee; border-radius: 8px; }
+.side_panel  { flex: 1 1 320px; background: #fff; padding: 1rem; border: 1px solid #eee; border-radius: 8px; }
+.tip_card    { background: #f8f8f8; padding: 0.75rem; border: 1px solid #e6e6e6; border-radius: 8px; }
+
+/* nav as list */
+nav { margin-top: 0.5rem; }
+.nav_list { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
+.nav_link { text-decoration: none; color: #2244aa; padding: 0.5rem 0.75rem; border-radius: 6px; }
+.nav_link:hover, .nav_link:focus { text-decoration: underline; }
+
+/* type */
+h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.125rem; }
+p  { margin: 0 0 1rem 0; }
+
+/* lists */
+ul, ol { margin: 0 0 1rem 1.25rem; }
+
+/* images responsive */
+img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+.image_wrap { margin: 1rem 0; }
+figcaption { font-size: 0.9rem; color: #666; margin-top: 0.25rem; }
+
+/* footer */
+footer { padding: 1rem 0; }
+footer .copyright { font-size: 0.95rem; color: #555; text-align: left; }
+
+/* small screens stack the columns */
+@media (max-width: 800px) {
+  #page_main.two_col { flex-direction: column; }
+}
