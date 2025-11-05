@@ -1,0 +1,133 @@
+body {
+    background-color: #04BFBF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+}
+
+#container {
+    width: 700px;
+    background-color: #F25270;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* NAVIGATION */
+nav {
+    margin-top: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #070404;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 15px;
+    background-color: #FFE6E8;
+    border-radius: 10px;
+}
+
+/* Headings inside main */
+h2 {
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #222222;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* Paragraphs */
+p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Unordered List */
+ul {
+    background-color: #FFD2D8;
+    padding: 15px;
+    border-radius: 8px;
+    list-style-type: circle;
+}
+
+ul li {
+    color: #000000;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Links inside main */
+main a {
+    color: #000000;
+    background-color: #FFD2D8;
+    padding: 6px 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px 0;
+}
+
+main a:hover {
+    background-color: #F9A1B3;
+    text-decoration: underline;
+}
+
+/* Images */
+main img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    margin: 20px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    padding: 10px;
+    margin-top: 20px;
+}
