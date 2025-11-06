@@ -166,5 +166,30 @@ footer {
 #feature_aside * {
     color: #FFFFFF !important;         
 }
+.goku-track {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 260px;        
+}
 
+
+.goku-move {
+  position: absolute;
+  height: 240px;       
+  left: -30%;
+  bottom: 0;
+  animation: gokuGlide 10s linear infinite;
+  image-rendering: auto;
+}
+
+
+@keyframes gokuGlide {
+  0%   { transform: translateX(0) scale(1); }
+  50%  { transform: translateX(140%) scale(1.02); }
+  100% { transform: translateX(0) scale(1); }
+}
+
+
+.goku-move:hover { animation-play-state: paused; }
 

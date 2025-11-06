@@ -168,3 +168,20 @@ nav li {
 #feature_aside * {
     color: #FFFFFF !important;         
 }
+
+/* Simple floating Goku animation */
+@keyframes gokuFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+.gokuFloat {
+    animation: gokuFloat 3s ease-in-out infinite;
+}
+
+.gokuFloat {
+    animation: gokuFloat 3s ease-in-out infinite;
+    box-shadow: 0 0 18px rgba(75,208,255,0.55);
+    transition: box-shadow .3s ease;
+}
