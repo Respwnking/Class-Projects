@@ -168,3 +168,6 @@ nav li {
 #feature_aside * {
     color: #FFFFFF !important;         
 }
+.multi_col {
+  display: flex;
+}
