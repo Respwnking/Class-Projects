@@ -171,3 +171,12 @@ nav li {
 .multi_col {
   display: flex;
 }
+/* floating animation for Kid Goku */
+.goku-box { text-align: center; margin: 20px 0; }
+.goku-float { width: 220px; animation: gokuFloat 3s ease-in-out infinite; }
+@keyframes gokuFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
