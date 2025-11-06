@@ -1,69 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Art</title>
-    <link rel="stylesheet" href="css2/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manga Art</title>
+  <link rel="stylesheet" href="css2/styles.css"/>
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <h1>Manga Art</h1>
-            <hr>
-            <nav>
-                <a href="index.html">Anime Art</a>
-                <a href="simple_art.html">Manga Art</a>
-                <a href="art_3.html">Pencil Art</a>
-                <hr>
-            </nav>
-        </header>
+  <div id="container">
+    <header id="site_header">
+      <h1>Manga Art</h1>
+      <hr />
 
-        <main>
-            <h2>Manga How It Started</h2>
+      <!-- Horizontal UL Navigation -->
+      <nav aria-label="Primary">
+        <ul class="nav_list">
+          <li><a class="nav_link" href="index.html">Anime Art</a></li>
+          <li><a class="nav_link" href="simple_art.html">Manga Art</a></li>
+          <li><a class="nav_link" href="art_3.html">Pencil Art</a></li>
+        </ul>
+        <hr />
+      </nav>
+    </header>
 
-            <!-- ✅ NEW H3 SUBHEADING #1 -->
-            <h3>Influence of Manga on Modern Anime</h3>
+    <!-- Two-column layout -->
+    <main id="page_main" class="two_col">
+      
+      <!-- SECTION -->
+      <section id="manga_section" class="content_area">
+        <h2>Manga How It Started</h2>
 
-            <p>Manga art is a huge part of Japan’s creative identity. It’s more than just comic books — it’s a form of visual storytelling that mixes deep emotion, humor, and imagination in every panel. What makes manga stand out is how it captures everyday life and fantasy with the same level of care. The art style can shift from soft and expressive to sharp and action packed, but it always feels personal. Manga has inspired artists, gamers, and dreamers all over the world, proving that a story told through drawings can connect people just as strongly as any movie or game.</p>
+        <h3>Influence of Manga on Modern Anime</h3>
 
-            <a href="https://blog.artsper.com/en/a-closer-look/japanese-manga-comics-history/" target="_blank" rel="noopener noreferrer">
-                Japanese Manga Comics History (Artsper Blog)
-            </a>
+        <p>
+          Manga art is a huge part of Japan’s creative identity. It is more than just comic books, it is a form of visual storytelling that mixes deep emotion, humor, and imagination in every panel. What makes manga stand out is how it captures everyday life and fantasy with the same level of care. The art style can shift from soft and expressive to sharp and action packed, but it always feels personal. Manga has inspired artists, gamers, and dreamers all over the world, proving that drawings can connect people as strongly as any movie or game.
+        </p>
 
-            <img src="images/godmode.jpeg" alt="Anime Art"> 
-            <hr>
+        <p>
+          <a href="https://blog.artsper.com/en/a-closer-look/japanese-manga-comics-history/" target="_blank">Japanese Manga Comics History (Artsper Blog)</a>
+        </p>
 
-            <!-- ✅ NEW H3 SUBHEADING #2 -->
-            <h3>How Manga Connects Art and Imagination</h3>
+        <figure class="image_wrap">
+          <img src="images/godmode.jpeg" alt="Dynamic manga action splash page">
+          <figcaption>Action panels guide the eye with strong shapes and motion.</figcaption>
+        </figure>
 
-            <img src="images/Gokufrieza.jpeg" alt="Anime Art">
-            <img src="images/goku.jpg" alt="Anime Art"> 
+        <hr />
 
-            <p>Manga is one of Japan’s most meaningful art forms because it reflects how storytelling is seen as both visual and emotional. It is not just about the action or characters — it’s about rhythm, pacing, and how every panel guides the reader’s feelings. Many manga artists spend years mastering how to express emotion through simple lines, turning small details like wind, silence, or a single look into powerful moments. What makes manga special is how it bridges generations; older readers find nostalgia in its quiet lessons while younger fans discover new worlds that feel personal. It’s an art form that teaches patience, imagination, and the beauty of storytelling without words.</p>
+        <h3>How Manga Connects Art and Imagination</h3>
 
-            <!-- ✅ NEW UNORDERED LIST -->
-            <ul>
-                <li>Focus on strong emotions and expressive art</li>
-                <li>Detailed backgrounds that tell part of the story</li>
-                <li>Blend of fantasy and real life themes</li>
-                <li>Massive influence on anime, gaming, and pop culture</li>
-            </ul>
+        <figure class="image_wrap">
+          <img src="images/Gokufrieza.jpeg" alt="Rivalry pose analysis">
+          <figcaption>Contrast and framing build emotional tension.</figcaption>
+        </figure>
 
-            <hr>
+        <figure class="image_wrap">
+          <img src="images/goku.jpg" alt="Hero pose with energy lines">
+          <figcaption>Line weight and energy effects direct attention.</figcaption>
+        </figure>
 
-            <a href="https://en.wikipedia.org/wiki/History_of_manga" target="_blank" rel="noopener noreferrer">
-                History of Manga (Wikipedia)
-            </a>
+        <p>
+          Manga is one of Japan’s most meaningful art forms because it treats storytelling as both visual and emotional. It is not just about action or characters, it is about pacing, rhythm, and how every panel guides the reader’s eye. Manga artists spend years mastering expressive line work, turning small moments into powerful scenes. Older readers find nostalgia in familiar stories, while younger fans discover new worlds that feel personal. Manga teaches imagination, patience, and how a simple drawing can carry deep meaning.
+        </p>
 
-            <img src="images/bulma.jpeg" alt="Anime Art">
-        </main>   
+        <ul class="bullet_list">
+          <li>Strong emotional expression through line work</li>
+          <li>Detailed backgrounds that support storytelling</li>
+          <li>Blend of fantasy and real life themes</li>
+          <li>Massive influence on anime, gaming, and pop culture</li>
+        </ul>
 
-        <footer>&copy; 2025 Anime Art</footer>
-    </div>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/History_of_manga" target="_blank">History of Manga (Wikipedia)</a>
+        </p>
 
+        <figure class="image_wrap">
+          <img src="images/bulma.jpeg" alt="Character study of Bulma">
+          <figcaption>Clear silhouettes reveal personality quickly.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ASIDE -->
+      <aside id="feature_aside" class="side_panel">
+        <div class="tip_card">
+          <h3>Practice Ideas</h3>
+          <ol class="number_list">
+            <li>Thumbnail a manga page with three story beats.</li>
+            <li>Try one panel using only two values for clarity.</li>
+            <li>Practice thin and thick line weight differences.</li>
+            <li>Study motion lines and test creating flow.</li>
+          </ol>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer>
+      <p class="copyright">&copy; 2025 Anime Art. Manga Art Page.</p>
+    </footer>
+
+  </div>
 </body>
-
 </html>
-
