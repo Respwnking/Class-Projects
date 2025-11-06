@@ -1,133 +1,159 @@
+/* SPACEPUNK LIGHT THEME — ELECTRIC BLUE + TEAL + VIOLET (NO PINK) */
+
 body {
-    background-color: #04BFBF;
+    background-color: #0C0F1A;          /* deep cool space */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Title */
 h1 {
-    color: #000000;
+    color: #4BD0FF;                     /* plasma blue */
     text-align: center;
+    font-size: 36px;
+    text-shadow: 0 0 14px rgba(75,208,255,0.55);
 }
 
 #container {
     width: 700px;
-    background-color: #F25270;
+    background-color: #131A28;          /* soft navy graphite */
     padding: 20px;
     margin: 20px auto;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(75,208,255,0.12); 
 }
 
-/* HEADER */
+/* Header */
 header {
     text-align: center;
 }
 
 header h1 {
     font-size: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-/* NAVIGATION */
+/* Navigation */
 nav {
-    margin-top: 15px;
+    margin-top: 18px;
     text-align: center;
 }
 
 nav a {
-    color: #070404;
+    color: #D7EFFF;                     /* icy white */
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
     font-weight: bold;
+    transition: color .25s ease, text-shadow .25s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #7C82FF;                     /* violet neon */
+    text-shadow: 0 0 10px rgba(124,130,255,0.45);
 }
 
-/* MAIN CONTENT */
+/* Main content */
 main {
-    padding: 15px;
-    background-color: #FFE6E8;
-    border-radius: 10px;
+    padding: 18px;
+    background-color: #1C2538;          /* lighter sci-fi navy */
+    border-radius: 12px;
+    box-shadow: 0 0 16px rgba(124,130,255,0.18);
 }
 
-/* Headings inside main */
+/* Headings */
 h2 {
-    color: #000000;
+    color: #4BD0FF;
     text-align: center;
     font-size: 28px;
-    margin-top: 0;
+    text-shadow: 0 0 12px rgba(75,208,255,0.55);
 }
 
 h3 {
-    color: #222222;
+    color: #7C82FF;
     font-size: 22px;
-    margin-top: 20px;
+    margin-top: 22px;
+    text-shadow: 0 0 10px rgba(124,130,255,0.35);
 }
 
 /* Paragraphs */
 p {
-    color: #000000;
+    color: #F6FAFF;
     font-size: 16px;
-    line-height: 1.6;
-    margin: 15px 0;
+    line-height: 1.7;
 }
 
-/* Unordered List */
+/* Lists */
 ul {
-    background-color: #FFD2D8;
+    background-color: rgba(75,208,255,0.12);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(75,208,255,0.18) inset;
     list-style-type: circle;
 }
 
 ul li {
-    color: #000000;
+    color: #F6FAFF;
     font-size: 16px;
     margin: 8px 0;
 }
 
-/* Links inside main */
+/* Buttons / Links */
 main a {
-    color: #000000;
-    background-color: #FFD2D8;
-    padding: 6px 8px;
-    border-radius: 6px;
+    color: #0C0F1A;
+    background-color: #4BD0FF;
+    padding: 6px 10px;
+    border-radius: 8px;
     text-decoration: none;
     display: inline-block;
     margin: 6px 0;
+    font-weight: bold;
+    transition: background-color .2s, box-shadow .2s;
+    box-shadow: 0 0 10px rgba(75,208,255,0.45);
 }
 
 main a:hover {
-    background-color: #F9A1B3;
+    background-color: #7C82FF;
+    color: #0C0F1A;
+    box-shadow: 0 0 15px rgba(124,130,255,0.55);
     text-decoration: underline;
 }
 
 /* Images */
 main img {
     display: block;
-    margin: 20px auto;
+    margin: 24px auto;
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #000000;
+    border-radius: 12px;
+    border: 2px solid #4BD0FF;
+    box-shadow: 0 0 22px rgba(75,208,255,0.45);
 }
 
-/* Horizontal rule */
+/* Captions */
+figcaption {
+    color: #E5F4FF;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+    text-shadow: 0 0 8px rgba(75,208,255,0.35);
+}
+
+/* Divider */
 hr {
     border: none;
     height: 2px;
-    background-color: #000000;
-    margin: 20px 0;
+    background-color: #4BD0FF;
+    margin: 22px 0;
+    box-shadow: 0 0 12px rgba(75,208,255,0.45);
 }
 
-/* FOOTER */
+/* Footer */
 footer {
     text-align: center;
     font-size: 16px;
-    color: #000000;
+    color: #D7EFFF;
     padding: 10px;
     margin-top: 20px;
+    text-shadow: 0 0 10px rgba(124,130,255,0.35);
 }
