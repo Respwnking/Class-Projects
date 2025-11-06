@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pencil Art</title>
   <link rel="stylesheet" href="css2/styles.css">
@@ -22,9 +23,10 @@
         </ul>
         <hr>
       </nav>
-        
-     </header>
+    </header>
 
+    <!-- everything belongs inside main for layout -->
+    <main id="page_main" class="two_col">
 
       <!-- SECTION -->
       <section id="pencil_section" class="content_area">
@@ -35,7 +37,7 @@
           Pencil art plays a huge role in the foundation of anime and manga. Every character design begins with simple
           shapes and loose lines to find poses, emotion, and motion. These early pencil drafts allow artists to explore
           ideas quickly before committing to details. Many creators prefer pencil because it feels fast, expressive, and
-          natural. Even in digital animation, pencil-style roughs help maintain energy and life in a character. Pencil
+          natural. Even in digital animation, pencil style roughs help maintain energy and life in a character. Pencil
           studies show structure, form, and attitude in ways that polished art sometimes hides.
         </p>
 
@@ -50,33 +52,41 @@
           emotion, and motion. Soft shading can set dramatic tone, while bolder lines help define strong poses. Before
           color is ever applied, pencil drawings help test backgrounds, poses, and storytelling flow. Directors often rely
           on these early drafts to check clarity and camera angles. Even as color and ink complete the frame, the pencil
-          foundation remains the heart of the art. Without strong rough work, many iconic anime scenes would not exist.
+          foundation remains the heart of the art.
         </p>
-       
-        <img src="images/booo.jpeg" alt="Character pencil sheet with notes">
 
-        <!-- ✅ Pencil Art Links -->
+        <img src="images/booo.jpeg" alt="Majin Buu sketch board">
+
+        <!-- Pencil art links -->
         <p>
-          <a href="https://www.animeoutline.com/how-to-draw-anime-basic-head/" 
+          <a href="https://www.animeoutline.com/how-to-draw-anime-basic-head/"
              target="_blank" rel="noopener noreferrer">
-             Pencil Basics for Anime Drawing (AnimeOutline)
+             Pencil Basics for Anime Drawing
           </a>
         </p>
 
         <p>
-          <a href="https://howtodrawmanga.com/pages/free-tutorials" 
+          <a href="https://howtodrawmanga.com/pages/free-tutorials"
              target="_blank" rel="noopener noreferrer">
-             Traditional Manga Pencil Techniques (Manga University)
+             Traditional Manga Pencil Techniques
           </a>
         </p>
+
+        <!-- animated Kid Goku with transparent PNG preferred and JPEG fallback -->
+        <div class="goku-box">
+          <picture>
+            <source srcset="images/Goku2.png" type="image/png">
+            <img src="images/Goku2.jpeg" alt="Kid Goku" class="goku-float">
+          </picture>
+        </div>
 
         <figure class="image_wrap">
+          <img src="images/dbz.jpg" alt="DBZ character boards">
           <figcaption>Concept sketches explore shape language and gesture.</figcaption>
         </figure>
-
       </section>
 
-      <!-- ASIDE / PRACTICE IDEAS -->
+      <!-- ASIDE -->
       <aside id="feature_aside" class="side_panel">
         <div class="tip_container">
           <h3>Practice Ideas</h3>
@@ -89,7 +99,7 @@
         </div>
       </aside>
 
-       <img src="images/dbz.jpg" alt="Character pencil sheet with notes">
+    </main>
 
     <footer>
       <p class="copyright">&copy; 2025 Anime Art. Pencil Art Page.</p>
@@ -98,3 +108,4 @@
   </div>
 </body>
 </html>
+
