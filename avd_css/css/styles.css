@@ -155,11 +155,16 @@ footer {
     color: #D7EFFF;
     padding: 10px;
     margin-top: 20px;
-    text-shadow: 0 0 10px rgba(124,130,255,0.35);
+    text-shadow: 0 0 10px rgba(227, 227, 231, 0.35);
 }
  nav li {
     display: inline;
     margin: 0 15px;
  }
+
+#feature_aside,
+#feature_aside * {
+    color: #FFFFFF !important;         
+}
 
 

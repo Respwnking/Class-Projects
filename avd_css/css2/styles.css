@@ -162,3 +162,9 @@ nav li {
    display: inline;
    margin: 0 15px;
 }   
+
+/* Make aside text light and readable */
+#feature_aside,
+#feature_aside * {
+    color: #FFFFFF !important;         
+}

@@ -163,13 +163,8 @@ nav li {
    margin: 0 15px;
 }   
 
-/* Make ALL text inside the aside bright and readable */
+/* Make aside text light and readable */
 #feature_aside,
-#feature_aside h3,
-#feature_aside .number_list li,
-#feature_aside p,
-#feature_aside ol,
 #feature_aside * {
-    color: #FFFFFF !important;      /* bright white */
-    text-shadow: 0 0 6px rgba(0,174,239,0.35);
+    color: #FFFFFF !important;         
 }
