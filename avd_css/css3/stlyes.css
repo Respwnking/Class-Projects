@@ -16,7 +16,7 @@ h1 {
 }
 
 #container {
-    width: 1000px;              
+    width: 1000px;
     background-color: #131A28;
     padding: 20px;
     margin: 20px auto;
@@ -54,7 +54,7 @@ nav a:hover {
     text-shadow: 0 0 10px rgba(124,130,255,0.45);
 }
 
-/* Main layout: content + aside */
+/* Main layout */
 main,
 #page_main {
     padding: 18px;
@@ -123,7 +123,7 @@ main a:hover {
     text-decoration: underline;
 }
 
-/* All images */
+/* Images */
 main img {
     display: block;
     margin: 24px auto;
@@ -162,54 +162,39 @@ footer {
 }
 
 nav li {
-   display: inline;
-   margin: 0 15px;
+    display: inline;
+    margin: 0 15px;
 }
 
-/* White aside text */
-#feature_aside,
-#feature_aside * {
-    color: #FFFFFF !important;
-}
-
-/* Floating Kid Goku */
-.goku-box { 
-    text-align: center; 
-    margin: 20px 0; 
-}
-
-.goku-float { 
-    width: 150px;
-    animation: gokuFloat 3s ease-in-out infinite; 
-}
-
-@keyframes gokuFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
-/* ----- TWO COLUMN LAYOUT FOR PENCIL ART (RIGHT SIDE HUGE) ----- */
-
+/* ----- TWO COLUMN LAYOUT ----- */
 .two_column_box {
   display: flex;
   gap: 2rem;
 }
 
-/* LEFT COLUMN (normal width) */
+/* LEFT column — smaller */
 #pencil_section {
-  flex: 1;
+  flex: 0.7;
 }
 
-/* RIGHT COLUMN (very wide) */
+/* RIGHT column — much larger */
 .pencil_column_extra {
-  flex: 2.5;
+  flex: 2;
 }
 
-/* LEFT COLUMN IMAGES (normal size) */
+/* LEFT column images */
 #pencil_section .image_wrap img {
   width: 100%;
-  max-width: 420px;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: 0 auto 24px;
+}
+
+/* RIGHT column images — HUGE */
+.pencil_column_extra .image_wrap img {
+  width: 100%;
+  max-width: 1000px;  
   height: auto;
   display: block;
   margin: 0 auto 24px;
@@ -218,69 +203,39 @@ nav li {
   box-shadow: 0 0 22px rgba(75,208,255,0.45);
 }
 
-/* RIGHT COLUMN IMAGES (HUGE) */
-.pencil_column_extra .image_wrap img {
-  width: 100%;
-  max-width: none;     /* allow full natural size */
-  height: auto;
-  display: block;
-  margin: 0 auto 32px;
-  border-radius: 12px;
-  border: 2px solid #4BD0FF;
-  box-shadow: 0 0 22px rgba(75,208,255,0.45);
-
-  /* MAKE THEM WAY BIGGER */
-  transform: scale(1.7);
-  transform-origin: center;
+/* ----- HUGE GIF ----- */
+.huge_gif {
+    width: 1200px;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+    border: 2px solid #4BD0FF;
+    box-shadow: 0 0 22px rgba(75,208,255,0.45);
 }
 
-/* Aside panel */
-.side_panel,
+/* Responsive GIF */
+@media (max-width: 1200px) {
+    .huge_gif {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Remove Practical Ideas */
 #feature_aside {
-  flex: 1;
+    display: none !important;
 }
 
 /* Mobile layout */
 @media (max-width: 900px) {
   main,
   #page_main {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .two_column_box {
-    flex-direction: column;
+      flex-direction: column;
   }
-
-  .side_panel,
-  #feature_aside {
-    margin-top: 15px;
-  }
-}
-
-/* 🔥 FORCE RIGHT COLUMN IMAGES TO BE MUCH BIGGER 🔥 */
-
-/* Left column images: keep them a bit smaller */
-#pencil_section .image_wrap img {
-  width: 100%;
-  max-width: 380px;      /* you can tweak this smaller/bigger */
-  height: auto;
-  display: block;
-  margin: 0 auto 24px;
-}
-
-/* Right column: give it more space */
-.pencil_column_extra {
-  flex: 2.5;             /* right column wider than left */
-}
-
-/* Right column images: bigger and overriding everything else */
-.pencil_column_extra .image_wrap img {
-  width: 100% !important;
-  max-width: 700px !important;   /* ← make this number larger if you want */
-  height: auto !important;
-  display: block;
-  margin: 0 auto 32px;
-  border-radius: 12px;
-  border: 2px solid #4BD0FF;
-  box-shadow: 0 0 22px rgba(75,208,255,0.45);
 }
