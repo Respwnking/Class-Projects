@@ -50,14 +50,14 @@ nav a {
 }
 
 nav a:hover {
-    color: #7C82FF;                     /* violet neon */
+    color: #7C82FF;                     
     text-shadow: 0 0 10px rgba(124,130,255,0.45);
 }
 
 /* Main content */
 main {
     padding: 18px;
-    background-color: #1C2538;          /* lighter sci-fi navy */
+    background-color: #1C2538;          
     border-radius: 12px;
     box-shadow: 0 0 16px rgba(124,130,255,0.18);
 }
@@ -115,7 +115,7 @@ main a {
 
 main a:hover {
     background-color: #7C82FF;
-    color: #0C0F1A;
+    color: #ffffff;
     box-shadow: 0 0 15px rgba(124,130,255,0.55);
     text-decoration: underline;
 }
@@ -155,33 +155,86 @@ footer {
     color: #D7EFFF;
     padding: 10px;
     margin-top: 20px;
-    text-shadow: 0 0 10px rgba(124,130,255,0.35);
+    text-shadow: 0 0 10px rgba(227, 227, 231, 0.35);
 }
 
 nav li {
-   display: inline;
-   margin: 0 15px;
-}   
+    display: inline;
+    margin: 0 15px;
+}
 
-/* Make aside text light and readable */
+/* Make aside text readable */
 #feature_aside,
 #feature_aside * {
     color: #FFFFFF !important;         
 }
 
-/* Simple floating Goku animation */
-@keyframes gokuFloat {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-12px); }
-    100% { transform: translateY(0); }
+/* Two column layout */
+.two_column_box {
+  display: flex;
+  gap: 2rem;
 }
 
-.gokuFloat {
-    animation: gokuFloat 3s ease-in-out infinite;
+.column_wrap,
+.manga_column_extra {
+  flex: 1;
 }
 
-.gokuFloat {
-    animation: gokuFloat 3s ease-in-out infinite;
-    box-shadow: 0 0 18px rgba(75,208,255,0.55);
-    transition: box-shadow .3s ease;
+@media (max-width: 900px) {
+  .two_column_box {
+    flex-direction: column;
+  }
+}
+
+/* Right column image sizing */
+.manga_column_extra img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.manga_column_extra .image_wrap img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Slightly wider right column */
+#manga_section {
+  flex: 1;
+}
+
+.manga_column_extra {
+  flex: 1.3;
+}
+
+/* ⭐ HUGE FULL-WIDTH DANCING GOKU ⭐ */
+.manga_column_extra .goku-track {
+  position: relative;
+  width: 100%;
+  height: 520px;     /* large container */
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.manga_column_extra .goku-move {
+  position: absolute;
+  width: 100%;       /* FULL column width */
+  height: auto;
+  bottom: 0;
+  left: -15%;        /* starts slightly offscreen */
+  animation: gokuGlide 12s linear infinite;
+  image-rendering: auto;
+}
+
+/* Smooth full-width loop animation */
+@keyframes gokuGlide {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(130%); }
+  100% { transform: translateX(0); }
+}
+
+.manga_column_extra .goku-move:hover {
+  animation-play-state: paused;
 }
