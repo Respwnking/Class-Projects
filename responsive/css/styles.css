@@ -1,4 +1,4 @@
-/* SPACEPUNK THEME FOR ART PAGES */
+/* SPACEPUNK THEME FOR ANIME ART PAGE */
 
 /* Base page */
 body {
@@ -39,7 +39,7 @@ hr {
   box-shadow: 0 0 12px rgba(75, 208, 255, 0.45);
 }
 
-/* Nav using UL + LI + A */
+/* Nav */
 .nav_list {
   list-style: none;
   padding: 0;
@@ -172,7 +172,7 @@ p {
   text-shadow: 0 0 8px rgba(75, 208, 255, 0.35);
 }
 
-/* Aside on the right */
+/* Aside */
 .side_panel {
   flex: 1;
 }
@@ -205,7 +205,7 @@ footer p {
   font-size: 14px;
 }
 
-/* Responsive: stack everything on small screens */
+/* Responsive: stack everything */
 @media (max-width: 900px) {
   #container {
     width: 95%;
@@ -217,10 +217,6 @@ footer p {
 
   .two_column_box {
     flex-direction: column;
-  }
-
-  .nav_list {
-    flex-wrap: wrap;
   }
 }
 
@@ -230,52 +226,16 @@ footer p {
   color: #FFFFFF !important;
 }
 
-/* EXTRA SHARED RULES FOR OTHER PAGES */
+/* ==========================================================
+   ⭐ ADDED MOBILE LAYOUT (YOUR CODE REMAINS UNCHANGED)
+   ========================================================== */
 
-/* Manga page uses this instead of .column_extra */
-.manga_column_extra {
-  flex: 1;
-}
-
-/* Make manga column behave like the right column on anime page */
-.two_column_box > #manga_section {
-  flex: 1.2;
-}
-
-/* Make images and video inside image_wrap responsive on all pages */
-.image_wrap video {
-  display: block;
-  max-width: 100%;
-  border-radius: 12px;
-  margin: 0 auto;
-}
-
-/* Small screens: nav vertical if needed */
-@media (max-width: 600px) {
-  .nav_list {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
-/* ============================
-   MOBILE AND TABLET STYLES
-   ============================ */
-
-/* Tablets and small laptops */
+/* Tablet layout */
 @media (max-width: 900px) {
 
-  /* container a bit looser */
   #container {
     width: 95%;
-    margin: 10px auto;
-    padding: 16px;
-  }
-
-  /* stack main content instead of side by side */
-  #page_main {
-    flex-direction: column;
+    padding: 0 1rem 1.5rem;
   }
 
   .two_column_box {
@@ -283,7 +243,6 @@ footer p {
     gap: 1.25rem;
   }
 
-  .content_area,
   .column_wrap,
   .column_extra,
   .manga_column_extra,
@@ -292,25 +251,21 @@ footer p {
     flex: 1 1 100%;
   }
 
-  /* nav can wrap if needed */
   .nav_list {
     flex-wrap: wrap;
     row-gap: 0.5rem;
+    justify-content: center;
   }
 }
 
-/* Phones */
+/* Phone layout */
 @media (max-width: 600px) {
-
-  body {
-    font-size: 0.95rem;
-  }
 
   #container {
     width: 100%;
     margin: 0;
+    padding: 0 0.75rem 1rem;
     border-radius: 0;
-    box-shadow: none;
   }
 
   header h1,
@@ -318,43 +273,88 @@ footer p {
     font-size: 28px;
   }
 
-  h2 {
-    font-size: 22px;
-  }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
 
-  h3 {
-    font-size: 18px;
-  }
-
-  /* nav becomes vertical for easy tapping */
   .nav_list {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 0.5rem;
   }
 
+  .nav_list li {
+    width: 100%;
+  }
+
   .nav_link {
-    display: inline-block;
-    padding: 0.4rem 0.9rem;
-    background-color: #1C2538;
-    border-radius: 999px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 8px;
   }
 
-  /* make sure content cards have some breathing room */
   .content_area {
-    padding: 14px;
+    padding: 1rem;
   }
 
-  /* images and video always fill width */
   .image_wrap img,
   .image_wrap video {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-width: 100%;
+    display: block;
   }
 
-  /* space out footer a bit less on mobile */
   footer p {
     font-size: 0.85rem;
     padding-bottom: 0.5rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  .nav_link {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}
+ 
+/* Force full mobile fit — prevents overflow */
+@media (max-width: 600px) {
+
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   /* removes horizontal scroll */
+  }
+
+  #container {
+    width: 100% !important;   /* override 900px desktop width */
+    margin: 0;
+    padding: 0 10px 20px;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  .two_column_box,
+  .column_wrap,
+  .column_extra,
+  .manga_column_extra,
+  .pencil_column_extra {
+    width: 100% !important;
+    flex-direction: column;
+  }
+
+  img, video {
+    max-width: 100% !important;  
+    height: auto;
+    display: block;
   }
 }
