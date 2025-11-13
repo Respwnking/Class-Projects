@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pencil Art</title>
+  <link rel="stylesheet" href="css2/styles.css">
+
+  <style>
+    /* Pencil page layout fix: make left column wider than right */
+
+    /* make sure the layout acts like a two column flex box */
+    #page_main.two_col {
+      margin-top: 1rem;
+    }
+
+    .two_column_box {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    /* left column takes more space */
+    #pencil_section {
+      flex: 1.4;
+      min-width: 0;
+    }
+
+    /* right column a bit smaller */
+    .pencil_column_extra {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* stack on small screens */
+    @media (max-width: 900px) {
+      .two_column_box {
+        flex-direction: column;
+      }
+
+      #pencil_section,
+      .pencil_column_extra {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <header id="site_header">
+      <h1>Pencil Art</h1>
+      <hr>
+
+      <nav aria-label="Primary">
+        <ul class="nav_list">
+          <li><a class="nav_link" href="index.html">Anime Art</a></li>
+          <li><a class="nav_link" href="simple_art.html">Manga Art</a></li>
+          <li><a class="nav_link" href="art_3.html">Pencil Art</a></li>
+          <li><a class="nav_link" href="flipbook.html">Flipbooks</a></li>
+        </ul>
+        <hr>
+      </nav>
+    </header>
+
+    <main id="page_main" class="two_col">
+
+      <div class="two_column_box">
+
+        <!-- LEFT COLUMN -->
+        <section id="pencil_section" class="content_area">
+          <h2>The Power of Pencil Art</h2>
+
+          <h3>Why Pencil Art Matters in Anime and Manga</h3>
+          <p>
+            Pencil art plays a huge role in the foundation of anime and manga. Every character design begins with simple
+            shapes and loose lines to find poses, emotion, and motion. These early pencil drafts let artists explore ideas
+            quickly before committing to details. Pencil studies show structure, form, and attitude in ways that polished
+            art sometimes hides.
+          </p>
+
+          <figure class="image_wrap">
+            <img src="images/51.webp" alt="Character pencil sheet with notes">
+            <figcaption>Layered pencil studies showing proportions and rhythm.</figcaption>
+          </figure>
+
+          <figure class="image_wrap">
+            <img src="images/How.jpg" alt="Kishimoto study sheet">
+            <figcaption>Kishimoto-style structure and expression notes.</figcaption>
+          </figure>
+
+          <h3>How Pencil Sketches Shape Final Artwork</h3>
+          <p>
+            Pencil sketches act like blueprints for finished scenes. Artists use different line weights to show
+            importance, emotion, and motion. Soft shading can set dramatic tone, while bold lines define strong poses.
+          </p>
+
+          <figure class="image_wrap">
+            <img src="images/images (2).jpeg" alt="Pencil action composition">
+            <figcaption>Action scenes often begin with rough pencil energy.</figcaption>
+          </figure>
+
+          <!-- LEFT COLUMN LINK (1 STILL HERE) -->
+          <p>
+            <a href="https://www.animeoutline.com/how-to-draw-anime-basic-head/" target="_blank">
+              Pencil Basics for Anime Drawing
+            </a>
+          </p>
+
+          <!-- HUGE GIF MOVED TO LEFT COLUMN -->
+          <figure class="image_wrap gif_wrap">
+            <img 
+              class="huge_gif"
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnpsZjRydmF5ZXM3MjFiN3BveHFocTZoYTViM25qbTl1d24wNnIyOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/frDFCFK9S4oHm/giphy.gif" 
+              alt="Huge Goku GIF">
+            <figcaption>Dynamic battle motion animation.</figcaption>
+          </figure>
+
+          <figure class="image_wrap">
+            <img src="images/dbz.jpg" alt="DBZ character boards">
+            <figcaption>Concept sketches explore shape language and gesture.</figcaption>
+          </figure>
+
+        </section>
+        <!-- END LEFT COLUMN -->
+
+        <!-- RIGHT COLUMN -->
+        <div class="pencil_column_extra">
+
+          <h3>Pencil Techniques in Manga Art</h3>
+          <p>
+            Manga pencil art focuses on capturing emotion and clarity before ink is added. Quick strokes block in poses
+            before tighter lines define structure. Many artists keep the first pass loose so they can adjust proportions,
+            angles, and expressions without feeling locked in.
+          </p>
+
+          <!-- MOVED LINK (NOW IN RIGHT COLUMN) -->
+          <p>
+            <a href="https://howtodrawmanga.com/pages/free-tutorials" target="_blank">
+              Traditional Manga Pencil Techniques
+            </a>
+          </p>
+
+          <figure class="image_wrap">
+            <img src="images/images (1).jpeg" alt="Realistic manga portrait">
+            <figcaption>Strong shading builds realism and emotion.</figcaption>
+          </figure>
+
+          <h3>Shading and Texture</h3>
+          <p>
+            Pencils allow artists to test shadows, textures, and lighting before committing to ink or digital tone.
+            Light hatching suggests softness; heavy shading adds tension and drama.
+          </p>
+
+          <figure class="image_wrap">
+            <img src="images/images (3).jpeg" alt="Character sketch variations">
+            <figcaption>Exploring face and hair shapes before finalizing designs.</figcaption>
+          </figure>
+
+          <h3>Gesture and Motion</h3>
+          <p>
+            Gesture sketches help capture movement, weight, and flow in a scene. These fast drawings ignore details and
+            focus on where the body is leaning or twisting.
+          </p>
+
+        
+          <h3>Page Layout and Story Flow</h3>
+          <p>
+            Before inking, artists sketch entire pages to plan story flow. They decide where the eye should travel and
+            which moments deserve bigger or smaller panels.
+          </p>
+
+          <h3>Layering Pencil With Digital Tools</h3>
+          <p>
+            Many artists combine pencil sketches with digital editing. This keeps the natural graphite feel while adding
+            clean line work, lighting corrections, and effects in a digital program.
+          </p>
+
+          <h3>Simple Pencil Practice Ideas</h3>
+          <ul class="bullet_list">
+            <li>Fill a page with fast gesture poses from action scenes.</li>
+            <li>Draw expressions from different angles using one character.</li>
+            <li>Practice shading simple shapes to build lighting skills.</li>
+            <li>Redraw a favorite anime frame using only pencil texture.</li>
+          </ul>
+
+        </div>
+        <!-- END RIGHT COLUMN -->
+
+      </div>
+
+    </main>
+
+    <footer>
+      <p class="copyright">© 2025 Anime Art. Pencil Art Page.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* SPACEPUNK THEME FOR ART PAGES */
+
+/* Base page */
+body {
+  background-color: #0C0F1A;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Outer container */
+#container {
+  width: 900px;
+  background-color: #131A28;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(75, 208, 255, 0.12);
+}
+
+/* Header */
+#site_header {
+  text-align: center;
+}
+
+#site_header h1 {
+  color: #4BD0FF;
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 14px rgba(75, 208, 255, 0.55);
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #4BD0FF;
+  margin: 18px 0;
+  box-shadow: 0 0 12px rgba(75, 208, 255, 0.45);
+}
+
+/* Nav using UL + LI + A */
+.nav_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav_link {
+  color: #D7EFFF;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color .25s ease, text-shadow .25s ease;
+}
+
+.nav_link:hover {
+  color: #7C82FF;
+  text-shadow: 0 0 10px rgba(124, 130, 255, 0.45);
+}
+
+/* Main layout: section + aside */
+#page_main {
+  display: flex;
+  gap: 20px;
+}
+
+/* Left big section */
+.content_area {
+  flex: 2;
+  background-color: #1C2538;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 0 16px rgba(124, 130, 255, 0.18);
+}
+
+/* Inner two column layout inside the section */
+.two_column_box {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Left column (original content) */
+.column_wrap {
+  flex: 1.2;
+}
+
+/* Right column (extra info + images) */
+.column_extra {
+  flex: 1;
+}
+
+/* Headings */
+h2 {
+  color: #4BD0FF;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 0;
+  text-shadow: 0 0 12px rgba(75, 208, 255, 0.55);
+}
+
+h3 {
+  color: #7C82FF;
+  font-size: 22px;
+  margin-top: 20px;
+  text-shadow: 0 0 10px rgba(124, 130, 255, 0.35);
+}
+
+/* Paragraphs */
+p {
+  color: #F6FAFF;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Bullet list in main */
+.bullet_list {
+  background-color: rgba(75, 208, 255, 0.12);
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(75, 208, 255, 0.18) inset;
+}
+
+.bullet_list li {
+  color: #F6FAFF;
+  margin: 6px 0;
+}
+
+/* Links in content */
+.content_area a {
+  color: #0C0F1A;
+  background-color: #4BD0FF;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 0;
+  font-weight: bold;
+  transition: background-color .2s, box-shadow .2s;
+  box-shadow: 0 0 10px rgba(75, 208, 255, 0.45);
+}
+
+.content_area a:hover {
+  background-color: #7C82FF;
+  color: #0C0F1A;
+  box-shadow: 0 0 15px rgba(124, 130, 255, 0.55);
+  text-decoration: underline;
+}
+
+/* Images and figures */
+.image_wrap {
+  margin: 20px 0;
+}
+
+.image_wrap img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 2px solid #4BD0FF;
+  box-shadow: 0 0 22px rgba(75, 208, 255, 0.45);
+  margin: 0 auto;
+}
+
+.image_wrap figcaption {
+  color: #E5F4FF;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+  text-shadow: 0 0 8px rgba(75, 208, 255, 0.35);
+}
+
+/* Aside on the right */
+.side_panel {
+  flex: 1;
+}
+
+.tip_card {
+  background-color: #151D30;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 16px rgba(75, 208, 255, 0.25);
+}
+
+.tip_card h3 {
+  text-align: center;
+}
+
+/* Make aside text readable */
+#feature_aside,
+#feature_aside * {
+  color: #FFFFFF;
+}
+
+/* Footer */
+footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+footer p {
+  color: #D7EFFF;
+  font-size: 14px;
+}
+
+/* Responsive: stack everything on small screens */
+@media (max-width: 900px) {
+  #container {
+    width: 95%;
+  }
+
+  #page_main {
+    flex-direction: column;
+  }
+
+  .two_column_box {
+    flex-direction: column;
+  }
+
+  .nav_list {
+    flex-wrap: wrap;
+  }
+}
+
+/* Make Practice Ideas text white */
+.tip_card,
+.tip_card * {
+  color: #FFFFFF !important;
+}
+
+/* EXTRA SHARED RULES FOR OTHER PAGES */
+
+/* Manga page uses this instead of .column_extra */
+.manga_column_extra {
+  flex: 1;
+}
+
+/* Make manga column behave like the right column on anime page */
+.two_column_box > #manga_section {
+  flex: 1.2;
+}
+
+/* Make images and video inside image_wrap responsive on all pages */
+.image_wrap video {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+/* Small screens: nav vertical if needed */
+@media (max-width: 600px) {
+  .nav_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

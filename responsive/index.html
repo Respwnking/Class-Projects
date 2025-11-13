@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Art</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* basic page defaults */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #111;
+      color: #f5f5f5;
+    }
+
+    /* shared container */
+    #container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem 2rem;
+    }
+
+    /* header and footer */
+    #site_header h1 {
+      margin-bottom: 0.25rem;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #333;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* navigation shared across pages */
+    .nav_list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.5rem 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .nav_link {
+      text-decoration: none;
+      color: #f5f5f5;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      background-color: #222;
+    }
+
+    .nav_link:hover {
+      background-color: #333;
+    }
+
+    /* main content layout for two column pages */
+    #page_main.two_col {
+      margin-top: 1rem;
+    }
+
+    /* two column layout on larger screens */
+    .two_column_box {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .column_wrap {
+      flex: 2 1 0;
+      min-width: 0;
+    }
+
+    .column_extra {
+      flex: 1.3 1 0;
+      min-width: 0;
+    }
+
+    /* headings and lists */
+    .content_area h2 {
+      margin-top: 0;
+    }
+
+    .bullet_list,
+    .number_list {
+      padding-left: 1.3rem;
+    }
+
+    /* image and video wrappers */
+    .image_wrap {
+      margin: 1rem 0;
+    }
+
+    /* make images and video scale on all pages */
+    .image_wrap img,
+    .image_wrap video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* optional card styling (used on Anime page) */
+    .tip_card {
+      border: 1px solid #333;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      background-color: #1a1a1a;
+      border-radius: 6px;
+    }
+
+    /* responsive behavior for tablets and phones */
+    @media (max-width: 768px) {
+      /* stack columns vertically */
+      .two_column_box {
+        flex-direction: column;
+      }
+
+      .column_wrap,
+      .column_extra {
+        width: 100%;
+      }
+
+      /* nav becomes vertical and easy to tap */
+      .nav_list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .nav_link {
+        display: inline-block;
+      }
+    }
+
+    /* extra small screens */
+    @media (max-width: 480px) {
+      body {
+        font-size: 0.95rem;
+      }
+
+      #container {
+        padding: 0 0.75rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <header id="site_header">
+      <h1>Anime Art</h1>
+      <hr>
+
+      <nav aria-label="Primary">
+        <ul class="nav_list">
+          <li><a class="nav_link" href="index.html">Anime Art</a></li>
+          <li><a class="nav_link" href="simple_art.html">Manga Art</a></li>
+          <li><a class="nav_link" href="art_3.html">Pencil Art</a></li>
+          <li><a class="nav_link" href="flipbook.html">Flipbooks</a></li>
+        </ul>
+        <hr>
+      </nav>
+    </header>
+
+    <main id="page_main" class="two_col">
+
+      <section id="anime_section" class="content_area">
+
+        <div class="two_column_box">
+
+          <!-- LEFT COLUMN -->
+          <div class="column_wrap">
+
+            <h2>Anime Art at its Greatest</h2>
+
+            <h3>The History and Growth of Anime Art</h3>
+
+            <p>
+              Anime art is one of Japans most powerful creative exports. It grew out of early hand drawn animation and
+              comic traditions, then evolved alongside film, television, and digital tools. What makes anime stand out
+              is the way it mixes simple shapes, clear silhouettes, and strong expressions with very thoughtful
+              composition. Even when the drawings look stylized, there is a lot of care put into anatomy, gesture,
+              and camera angles. Over time studios have developed their own visual identities, so fans can often tell
+              which artist or studio worked on a scene just from the line quality and color choices.
+            </p>
+
+            <figure class="image_wrap">
+              <img src="images/Narutoand_Sasuke.jpeg" alt="Iconic rivalry pose study of Naruto and Sasuke">
+              <figcaption>Strong silhouettes help action read at a glance.</figcaption>
+            </figure>
+
+            <h3>Influence of Anime on Culture and Imagination</h3>
+
+            <figure class="image_wrap">
+              <img src="images/Sagemode.jpeg" alt="Dynamic hero study in sage mode with effects">
+              <figcaption>Effects art and line weight amplify energy and focus.</figcaption>
+            </figure>
+
+            <p>
+              Anime has changed how people experience visual stories around the world. Shows and films introduce new
+              ideas about friendship, courage, identity, and loss through characters that feel larger than life but still
+              relatable. Many artists first get interested in drawing by pausing their favorite scenes and trying to copy
+              a pose or an expression. Anime design also influences fashion, music videos, game art, and fan conventions.
+              What started as a style from one country has turned into a shared visual language that inspires artists in
+              every corner of the world.
+            </p>
+
+            <ul class="bullet_list">
+              <li>Storytelling that blends emotion, action, and humor</li>
+              <li>Character design that shows personality in a single pose</li>
+              <li>Environments that feel like complete worlds you could visit</li>
+              <li>Lasting impact on games, illustration, and fan communities</li>
+            </ul>
+
+            <p>
+              <a href="https://www.wingedcanvas.com/single-post/the-anime-art-style-why-is-it-so-popular" target="_blank">
+                The Anime Art Style: Why Is It So Popular?
+              </a><br>
+              <a href="https://wherecreativityworks.com/the-aesthetics-of-manga-art/" target="_blank">
+                The Aesthetics of Manga Art
+              </a>
+            </p>
+
+            <!-- PRACTICE IDEAS IN LEFT COLUMN -->
+            <div class="tip_card">
+              <h3>Practice Ideas</h3>
+              <ol class="number_list">
+                <li>Thumbnail a simple scene using three panels and one clear focal point.</li>
+                <li>Pick a favorite character and redraw them in a different mood or setting.</li>
+                <li>Study a short clip frame by frame and sketch the key poses that carry the action.</li>
+                <li>Limit yourself to one main color and one accent color to control mood.</li>
+              </ol>
+            </div>
+
+            <!-- ⭐ ADDED GIF HERE ⭐ -->
+            <figure class="image_wrap">
+              <img 
+                src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHFuMG1mNjFrYzNlajZuenRsYnVlM2cxdzEyaHRyeHRjN2o0YjRkYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OJfh9m8PM3Rja/giphy.gif" 
+                alt="Anime action GIF">
+              <figcaption>Expressive motion brings anime scenes to life.</figcaption>
+            </figure>
+
+          </div>
+          <!-- END LEFT COLUMN -->
+
+          <!-- RIGHT COLUMN -->
+          <div class="column_extra">
+
+            <h3>Color and Emotion in Anime</h3>
+            <p>
+              Color is one of the strongest tools in anime art. Warm colors can push intensity, danger, or comfort,
+              while cooler colors often suggest distance, mystery, or calm. Many scenes are built around one dominant
+              color with a small accent color that draws the eye to a character or object. Background artists and
+              directors of photography plan the palette for each scene so that the emotional beats are supported before
+              a single line is spoken.
+            </p>
+
+            <figure class="image_wrap">
+              <img src="images/download.jpeg" alt="Anime emotional color scene">
+              <figcaption>Careful color choices shape the emotional tone of a scene.</figcaption>
+            </figure>
+
+            <h3>Line Work and Style</h3>
+            <p>
+              Line work in anime does more than outline shapes. Thicker lines around the outside of a figure can make
+              a character feel solid and grounded, while thinner lines inside the form keep details light and flexible.
+              Some studios favor very clean, controlled lines, while others keep sketchy edges to preserve energy.
+              The way eyes, hair, and clothing folds are drawn becomes part of the signature look for a series.
+            </p>
+
+            <figure class="image_wrap">
+              <img src="images/download (1).jpeg" alt="Anime line work example">
+              <figcaption>Line quality changes how soft, sharp, or intense a character feels.</figcaption>
+            </figure>
+
+            <h3>Motion and Timing</h3>
+            <p>
+              Anime is known for choosing strong, memorable poses instead of constant movement. Animators decide which
+              moments deserve the most detail and save extra drawings for those key impacts. Smear frames, speed lines,
+              and stretched shapes help the viewer feel motion even when only a few frames are used. This careful timing
+              lets artists keep animation expressive without needing every part of the frame to move all the time.
+            </p>
+
+            <h3>Character Design</h3>
+            <p>
+              Character design starts with a clear idea of who the person is and what role they play in the story.
+              Proportions, hairstyles, clothing, and color schemes all signal personality and background. Simple, bold
+              shapes make characters easy to recognize even in small thumbnails or crowded battle scenes. Many designs
+              also include one standout detail, like a unique accessory or pattern, that fans remember instantly.
+            </p>
+
+            <h3>Worldbuilding</h3>
+            <p>
+              Background artists bring entire worlds to life, from quiet school courtyards to huge fantasy cities.
+              Perspective, lighting, and texture all work together to make settings feel lived in rather than empty.
+              Even small details like signs, clutter, and color shifts in the sky help tell the viewer what kind of
+              world this is and how it feels to live there. Strong worldbuilding makes every frame feel like part of
+              a larger universe beyond the camera.
+            </p>
+
+            <figure class="image_wrap">
+              <img src="images/download (2).jpeg" alt="Anime worldbuilding example">
+              <figcaption>Detailed settings make viewers believe the world continues beyond the frame.</figcaption>
+            </figure>
+
+            <h3>Global Influence</h3>
+            <p>
+              Anime has encouraged artists everywhere to pick up a sketchbook or tablet and start creating. You can see
+              anime inspired design in independent comics, fan art, game concept art, and fashion. Many studios now hire
+              artists from different countries who grew up learning from the same shows. The style keeps evolving as new
+              voices add their own culture, ideas, and visual influences to the mix.
+            </p>
+
+          </div>
+          <!-- END RIGHT COLUMN -->
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Anime Art. Home page.</p>
+    </footer>
+  </div>
+</body>
+</html>
