@@ -258,3 +258,103 @@ footer p {
     gap: 10px;
   }
 }
+
+/* ============================
+   MOBILE AND TABLET STYLES
+   ============================ */
+
+/* Tablets and small laptops */
+@media (max-width: 900px) {
+
+  /* container a bit looser */
+  #container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 16px;
+  }
+
+  /* stack main content instead of side by side */
+  #page_main {
+    flex-direction: column;
+  }
+
+  .two_column_box {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .content_area,
+  .column_wrap,
+  .column_extra,
+  .manga_column_extra,
+  .pencil_column_extra {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  /* nav can wrap if needed */
+  .nav_list {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  #container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  header h1,
+  #site_header h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* nav becomes vertical for easy tapping */
+  .nav_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav_link {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background-color: #1C2538;
+    border-radius: 999px;
+  }
+
+  /* make sure content cards have some breathing room */
+  .content_area {
+    padding: 14px;
+  }
+
+  /* images and video always fill width */
+  .image_wrap img,
+  .image_wrap video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* space out footer a bit less on mobile */
+  footer p {
+    font-size: 0.85rem;
+    padding-bottom: 0.5rem;
+  }
+}
