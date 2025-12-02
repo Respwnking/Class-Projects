@@ -1,0 +1,371 @@
+/* SPACEPUNK THEME FOR ANIME ART PAGE */
+
+/* Base page */
+body {
+  background-color: #0A0C0F; /* deeper Zelda twilight black */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Outer container */
+#container {
+  width: 900px;
+  background-color: #0F1923; /* ancient Sheikah stone */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 217, 102, 0.18); /* glowing Hyrule gold */
+}
+
+/* Header */
+#site_header {
+  text-align: center;
+}
+
+#site_header h1 {
+  color: #FFD966; /* royal Hyrule gold */
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 14px rgba(255, 217, 102, 0.55); /* gold glow */
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #FFD966;
+  margin: 18px 0;
+  box-shadow: 0 0 12px rgba(255, 217, 102, 0.45);
+}
+
+/* ============================================================
+   NAVIGATION BAR WITH SEE-THROUGH ANIME BACKGROUND IMAGE
+   ============================================================ */
+nav {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Background image behind nav bar */
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url("images/luffyoverthemoon.jpg") center/cover no-repeat;
+  opacity: 0.35;
+  z-index: -1;
+  filter: brightness(0.8);
+}
+
+/* Keep nav content above image */
+.nav_list,
+.nav_link {
+  position: relative;
+  z-index: 2;
+}
+
+/* Nav */
+.nav_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav_link {
+  color: #E8D9A1; /* Spirit Temple sand */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color .25s ease, text-shadow .25s ease;
+}
+
+.nav_link:hover {
+  color: #4CAF50; /* sacred emerald */
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.45);
+}
+
+/* Main layout: section + aside */
+#page_main {
+  display: flex;
+  gap: 20px;
+}
+
+/* Left big section */
+.content_area {
+  flex: 2;
+  background-color: #131F2B; /* deeper Sheikah blue stone */
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 0 16px rgba(110, 195, 255, 0.18); /* Sheikah glow */
+}
+
+/* Inner two column layout */
+.two_column_box {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Columns */
+.column_wrap {
+  flex: 1.2;
+}
+
+.column_extra,
+.manga_column_extra,
+.pencil_column_extra {
+  flex: 1;
+}
+
+/* Headings */
+h2 {
+  color: #FFD966; /* Hyrule gold */
+  text-align: center;
+  font-size: 28px;
+  margin-top: 0;
+  text-shadow: 0 0 12px rgba(255, 217, 102, 0.55);
+}
+
+h3 {
+  color: #4CAF50; /* sacred emerald */
+  font-size: 22px;
+  margin-top: 20px;
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.35);
+}
+
+/* Paragraphs */
+p {
+  color: #DDE6EA; /* Hylian steel */
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Bullet list */
+.bullet_list {
+  background-color: rgba(255, 217, 102, 0.12);
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 217, 102, 0.18) inset;
+}
+
+.bullet_list li {
+  color: #FFFFFF;
+  margin: 6px 0;
+}
+
+/* Links */
+.content_area a {
+  color: #0A0C0F;
+  background-color: #FFD966;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 0;
+  font-weight: bold;
+  transition: background-color .2s, box-shadow .2s;
+  box-shadow: 0 0 10px rgba(255, 217, 102, 0.45);
+}
+
+.content_area a:hover {
+  background-color: #4CAF50;
+  color: #0A0C0F;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.55);
+  text-decoration: underline;
+}
+
+/* Images */
+.image_wrap {
+  margin: 20px 0;
+}
+
+.image_wrap img,
+.image_wrap video {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 2px solid #FFD966;
+  box-shadow: 0 0 22px rgba(255, 217, 102, 0.45);
+  margin: 0 auto;
+}
+
+.image_wrap figcaption {
+  color: #E8F6FF;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Aside panel */
+.side_panel {
+  flex: 1;
+}
+
+.tip_card {
+  background-color: #0D141B;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 16px rgba(110, 195, 255, 0.25);
+}
+
+.tip_card h3 {
+  text-align: center;
+}
+
+/* Make aside text readable */
+#feature_aside,
+#feature_aside * {
+  color: #FFFFFF;
+}
+
+/* Footer */
+footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+footer p {
+  color: #DDE6EA;
+  font-size: 14px;
+}
+
+/* ================================
+   RESPONSIVE 
+================================ */
+@media (max-width: 900px) {
+  #container {
+    width: 95%;
+    padding: 0 1rem 1.5rem;
+  }
+
+  #page_main {
+    flex-direction: column;
+  }
+
+  .two_column_box {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .column_wrap,
+  .column_extra,
+  .manga_column_extra,
+  .pencil_column_extra {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .nav_list {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  #container {
+    width: 100% !important;
+    margin: 0;
+    padding: 0 10px 20px;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+
+  header h1,
+  #site_header h1 {
+    font-size: 28px;
+  }
+
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+
+  .nav_list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav_list li {
+    width: 100%;
+  }
+
+  .nav_link {
+    display: block;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+
+  .image_wrap img,
+  .image_wrap video {
+    width: 100%;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .nav_link {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Contact Page */
+.contact_form label {
+  color: #4CAF50;
+}
+
+.contact_form input,
+.contact_form textarea {
+  border: 1px solid #FFD966;
+  background: #0A0C0F;
+  box-shadow: 0 0 12px rgba(255, 217, 102, 0.2);
+}
+
+.contact_button {
+  background: #FFD966;
+  color: #0A0C0F;
+  box-shadow: 0 0 12px rgba(255, 217, 102, 0.4);
+}
+
+.contact_button:hover {
+  background: #4CAF50;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(76, 175, 80, 0.6);
+}
+
+/* Make all body text white */
+p,
+li,
+figcaption,
+label,
+footer p,
+.tip_card *,
+.contact_form *,
+.content_area a,
+.side_panel *,
+.column_wrap p,
+.column_extra p {
+  color: #ffffff !important;
+}
+

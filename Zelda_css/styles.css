@@ -1,0 +1,206 @@
+/* Base page */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #05080f;
+  color: #f5f5f5;
+}
+
+/* Layout container */
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  background: radial-gradient(circle at top, #1b2838 0, #05080f 55%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+#site_header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#site_header h1 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.nav_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav_link {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #e0c066;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
+.nav_link:hover,
+.nav_link:focus {
+  background-color: #e0c066;
+  color: #05080f;
+}
+
+/* Main content */
+#page_main {
+  flex: 1;
+}
+
+/* Generic content card */
+.content_section {
+  background-color: rgba(5, 8, 15, 0.85);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  border: 1px solid #37475c;
+}
+
+/* Headings */
+h2,
+h3 {
+  color: #e0c066;
+  margin-top: 0;
+}
+
+/* Links in content */
+#page_main a {
+  color: #9bd6ff;
+}
+
+#page_main a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img.responsive_img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #37475c;
+}
+
+/* Home feature area: three cards */
+.feature_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.feature_card {
+  flex: 1 1 250px;
+  background-color: rgba(5, 8, 15, 0.9);
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid #37475c;
+}
+
+/* Characters page layout */
+.characters_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.character_card {
+  flex: 1 1 280px;
+  background-color: rgba(5, 8, 15, 0.9);
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid #37475c;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Games page list and cards */
+.games_list {
+  margin-left: 20px;
+}
+
+.game_card {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #37475c;
+  background-color: rgba(5, 8, 15, 0.9);
+}
+
+/* Locations page grid */
+.locations_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.location_card {
+  background-color: rgba(5, 8, 15, 0.9);
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #37475c;
+}
+
+/* Media page */
+.media_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.media_wrapper iframe,
+.media_wrapper video,
+.media_wrapper audio {
+  max-width: 100%;
+}
+
+/* Footer */
+#site_footer {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #37475c;
+  color: #d0d0d0;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  #container {
+    padding: 12px;
+  }
+
+  .locations_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .locations_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav_list {
+    justify-content: center;
+  }
+}
