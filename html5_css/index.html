@@ -1,349 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bloody Mary Buddy Hot Sauce</title>
-  <meta name="description" content="Bloody Mary Buddy Hot Sauce. Extremely spicy, bold flavor, built for brunch and beyond." />
 
   <style>
-    :root{
-      --bg:#0b0b0f;
-      --panel:#11111a;
-      --panel2:#0f0f16;
-      --text:#ffffff;
-      --muted:#cfcfe6;
-      --red:#ff2d2d;
-      --gold:#ffd54a;
-      --ink:#000000;
-      --stroke:rgba(255,255,255,.10);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 22px;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0f;
+      color: #ffffff;
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 700px at 20% 10%, rgba(255,45,45,.22), transparent 55%),
-                  radial-gradient(900px 600px at 85% 15%, rgba(255,213,74,.18), transparent 55%),
-                  radial-gradient(900px 600px at 50% 100%, rgba(255,45,45,.12), transparent 60%),
-                  var(--bg);
-      color: var(--text);
-      line-height:1.45;
+    header {
+      background: #000;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:focus{ outline: 3px solid rgba(255,213,74,.75); outline-offset: 3px; border-radius: 10px; }
-
-    .wrap{ width:min(1100px, 92vw); margin:0 auto; }
-
-    header{
-      position: sticky;
-      top:0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(0,0,0,.55);
-      border-bottom: 1px solid var(--stroke);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:14px 0;
-    }
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-    }
-    .brand .name{
-      font-weight: 900;
-      letter-spacing: .06em;
+    header h1 {
+      margin: 0;
+      font-size: 20px;
       text-transform: uppercase;
-      font-size: 18px;
+      letter-spacing: 2px;
     }
-    .brand .tag{
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+
+    header span {
+      color: #ffd54a;
+      font-weight: bold;
       font-size: 12px;
-      color: var(--gold);
+      letter-spacing: 2px;
     }
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap:14px;
-      padding:0;
-      margin:0;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    nav a{
-      display:inline-block;
-      padding:10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(17,17,26,.55);
-      font-weight: 800;
-      letter-spacing:.04em;
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 14px;
+      font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
     }
-    nav a:hover{
-      border-color: rgba(255,213,74,.55);
-      background: rgba(255,213,74,.10);
+
+    nav a:hover {
+      color: #ff2d2d;
     }
 
-    .hero{
-      padding: 42px 0 26px;
-    }
-    .heroCard{
-      border-radius: var(--radius);
-      border: 1px solid var(--stroke);
-      background: linear-gradient(180deg, rgba(17,17,26,.92), rgba(15,15,22,.92));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 0;
-      align-items:stretch;
-    }
-    @media (max-width: 880px){
-      .heroGrid{ grid-template-columns: 1fr; }
-    }
-
-    .heroLeft{
-      padding: 34px 26px;
-    }
-    .kicker{
-      display:inline-block;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,45,45,.14);
-      border: 1px solid rgba(255,45,45,.35);
-      color: var(--red);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing:.12em;
-      font-size: 12px;
-    }
-    h1{
-      margin: 14px 0 10px;
-      font-size: clamp(40px, 5vw, 62px);
-      line-height: 1.02;
-      letter-spacing: .02em;
-      text-transform: uppercase;
-      font-weight: 950;
-    }
-    .sub{
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 58ch;
-    }
-
-    .ctaRow{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top: 18px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-weight: 950;
-      letter-spacing:.06em;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      cursor:pointer;
-      user-select:none;
-    }
-    .btnPrimary{
-      background: var(--red);
-      color: var(--ink);
-      border-color: rgba(255,45,45,.8);
-    }
-    .btnPrimary:hover{ filter: brightness(1.05); }
-    .btnSecondary{
-      background: rgba(255,213,74,.12);
-      color: var(--gold);
-      border-color: rgba(255,213,74,.35);
-    }
-    .btnSecondary:hover{ background: rgba(255,213,74,.18); }
-
-    .fineprint{
-      margin-top: 14px;
-      color: rgba(207,207,230,.9);
-      font-size: 12px;
-    }
-
-    .heroRight{
-      padding: 26px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:
-        radial-gradient(420px 260px at 30% 20%, rgba(255,213,74,.22), transparent 60%),
-        radial-gradient(420px 260px at 70% 70%, rgba(255,45,45,.18), transparent 60%),
-        rgba(0,0,0,.25);
-      border-left: 1px solid var(--stroke);
-    }
-    @media (max-width: 880px){
-      .heroRight{ border-left:none; border-top: 1px solid var(--stroke); }
-    }
-    .logoBox{
-      width: min(340px, 78vw);
-      aspect-ratio: 1 / 1;
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.35);
-      box-shadow: 0 18px 50px rgba(0,0,0,.45);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding: 16px;
-    }
-    .logoBox img{
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display:block;
-      border-radius: 18px;
-      background: #ffffff;
-    }
-
-    section{
-      padding: 26px 0;
-    }
-    .sectionTitle{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 16px;
-      margin-bottom: 14px;
-    }
-    .sectionTitle h2{
-      margin:0;
-      font-size: 28px;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing:.05em;
-    }
-    .sectionTitle p{
-      margin:0;
-      color: var(--muted);
-      font-weight: 650;
-    }
-
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    @media (max-width: 900px){
-      .grid3{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      border-radius: var(--radius);
-      border: 1px solid var(--stroke);
-      background: rgba(17,17,26,.88);
-      padding: 18px;
-      box-shadow: 0 14px 40px rgba(0,0,0,.25);
-    }
-    .card h3{
-      margin:0 0 8px;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing:.06em;
-      font-size: 15px;
-    }
-    .card p{
-      margin:0;
-      color: var(--muted);
-    }
-
-    .heatWrap{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 14px;
-    }
-    @media (max-width: 900px){
-      .heatWrap{ grid-template-columns: 1fr; }
-    }
-    .meter{
-      margin-top: 12px;
-      height: 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.12);
-      overflow:hidden;
-    }
-    .meterFill{
-      width: 86%;
-      height: 100%;
-      background: linear-gradient(90deg, rgba(255,213,74,.9), rgba(255,45,45,.95));
-    }
-    .pillRow{
-      display:flex;
-      gap: 10px;
-      flex-wrap:wrap;
-      margin-top: 10px;
-    }
-    .pill{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.28);
-      font-size: 12px;
-      font-weight: 850;
-      letter-spacing:.04em;
-      text-transform: uppercase;
-    }
-
-    .buyCard{
-      text-align:center;
-      padding: 26px;
-      background:
-        radial-gradient(520px 320px at 20% 10%, rgba(255,45,45,.20), transparent 60%),
-        radial-gradient(520px 320px at 80% 60%, rgba(255,213,74,.16), transparent 60%),
-        rgba(17,17,26,.92);
-    }
-
-    footer{
-      padding: 26px 0 34px;
-      border-top: 1px solid var(--stroke);
-      background: rgba(0,0,0,.55);
-    }
-    .footerGrid{
-      display:grid;
+    .hero {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 24px;
+      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items:start;
+      gap: 32px;
+      background: #11111a;
+      border-radius: 16px;
     }
-    @media (max-width: 820px){
-      .footerGrid{ grid-template-columns: 1fr; }
-    }
-    .small{
-      color: rgba(207,207,230,.9);
-      font-size: 12px;
-      margin-top: 10px;
-    }
-    .label{
-      font-weight: 950;
-      letter-spacing:.08em;
+
+    .hero h2 {
+      font-size: 48px;
+      margin: 0 0 12px;
       text-transform: uppercase;
-      color: var(--gold);
+    }
+
+    .hero p {
+      color: #cfcfe6;
+      font-size: 16px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: #ff2d2d;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    .buttons a.secondary {
+      background: transparent;
+      color: #ffd54a;
+      border: 2px solid #ffd54a;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 320px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 12px;
+      margin: auto;
+      display: block;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    section h3 {
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #11111a;
+      padding: 20px;
+      border-radius: 14px;
+    }
+
+    footer {
+      background: #000;
+      padding: 32px 24px;
+      margin-top: 60px;
+    }
+
+    footer p {
       font-size: 12px;
+      color: #cfcfe6;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
     }
   </style>
 </head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Bloody Mary Buddy</h1>
+    <span>Extremely Spicy</span>
+  </div>
+  <nav>
+    <a href="#flavor">Flavor</a>
+    <a href="#heat">Heat</a>
+    <a href="#buy">Buy</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>The Brunch Boss</h2>
+    <p>
+      A bold Bloody Mary style hot sauce built for cocktails, wings,
+      eggs, tacos, and anything that needs serious heat.
+    </p>
+
+    <div class="buttons">
+      <a href="#buy">Get Your Bottle</a>
+      <a href="#flavor" class="secondary">Flavor Profile</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="logo.png" alt="Bloody Mary Buddy Hot Sauce">
+  </div>
+</div>
+
+<section id="flavor">
+  <h3>Flavor Profile</h3>
+  <div class="cards">
+    <div class="card">Savory tomato punch</div>
+    <div class="card">Bright citrus pop</div>
+    <div class="card">Long, confident burn</div>
+  </div>
+</section>
+
+<section id="heat">
+  <h3>Heat Level</h3>
+  <p>Not a casual sauce. This one builds fast and lingers.</p>
+</section>
+
+<section id="buy">
+  <h3>Ready to Feel the Heat</h3>
+  <a class="buttons a" href="https://example.com">Buy Now</a>
+</section>
+
+<footer>
+  <p>© Bloody Mary Buddy Hot Sauce</p>
+  <p>Email: hello@example.com</p>
+</footer>
+
+</body>
+</html>
